@@ -1,0 +1,27 @@
+.section {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.aside {
+    width: 200px;
+    background: lightcoral;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.container {
+    background: blueviolet;
+    overflow: auto;
+    position: absolute;
+    top:0;
+    left: 210px;
+    right: 0;
+    bottom: 0;
+}

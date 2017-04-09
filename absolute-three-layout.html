@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/absolute-three-layout.css">
+</head>
+<body>
+<header class="header"></header>
+<section class="section">
+    <div class="aside">
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+        2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>2 <br>
+
+    </div>
+    <div class="container">
+        <button class="shrink-btn">收缩</button>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+        1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+    </div>
+</section>
+
+<script src="js/jquery-3.1.0.js"></script>
+<script>
+    $('body').on('click', '.shrink-btn', function () {
+
+        $('.container').animate({
+            left: '0'
+        },3000);
+        $(this).replaceWith('<button class="btn-active">展开</button>');
+    });
+
+    $('body').on('click', '.btn-active', function () {
+        console.log('1231');
+        $('.container').css({
+            left: '210px'
+        },5000);
+        $(this).replaceWith('<button class="shrink-btn">收缩</button>');
+    })
+
+</script>
+</body>
+</html>
